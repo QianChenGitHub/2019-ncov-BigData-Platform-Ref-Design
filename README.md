@@ -41,7 +41,7 @@ Kafka 里的数据除了用于实时分析还被通过streamSets转换成Parquet
 历史数据
 ![Demo Image](https://github.com/charlesDataCenterFPGA/2019-ncov-BigData-Platform-Ref-Design/blob/master/%E5%8E%86%E5%8F%B2%E6%95%B0%E6%8D%AE.PNG)
 
-流行病史分析算法（初步想法，待完善）：
+流行病史分析算法（初步想法，待完善，需要医疗相关专业人士帮助）：
 如果手机漫游到过武汉，或者有GPS至武汉的记录，或者现场交易电子支付记录，检查行踪范围是否为被污染区，或者是否有跟病例交易记录。
 公共交通记录航班号或者车次是否有病例同乘。
 
