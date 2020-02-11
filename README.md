@@ -28,3 +28,20 @@ Kafka 里的数据除了用于实时分析还被通过streamSets转换成Parquet
 
 最后生成的人员关系图以及地图视图的可视化工作在Solr组件中完成。
 
+数据模型schema 总览
+![Demo Image](https://github.com/charlesDataCenterFPGA/2019-ncov-BigData-Platform-Ref-Design/blob/master/%E6%80%BB%E8%A7%88.PNG)
+
+流数据schema 用于判断实时数据的状态，并在必要情况下生成警报信息
+![Demo Image](https://github.com/charlesDataCenterFPGA/2019-ncov-BigData-Platform-Ref-Design/blob/master/%E6%B5%81%E6%95%B0%E6%8D%AE.PNG)
+
+分析诊疗状态记录
+	1. 如果不为空而且!=0 则发出警报信息给相关人员包含：身份证，当前地点（查询位置表格），诊疗状态 
+	2. 如果诊疗状态为空，则判断体温，如果体温>37.5摄氏度则发出警报信息给相关人员：身份证，当前地点（查询位置表格），体温值
+
+历史数据
+![Demo Image](https://github.com/charlesDataCenterFPGA/2019-ncov-BigData-Platform-Ref-Design/blob/master/%E5%8E%86%E5%8F%B2%E6%95%B0%E6%8D%AE.PNG)
+
+流行病史分析算法（初步想法，待完善）：
+如果手机漫游到过武汉，或者有GPS至武汉的记录，或者现场交易电子支付记录，检查行踪范围是否为被污染区，或者是否有跟病例交易记录。
+公共交通记录航班号或者车次是否有病例同乘。
+
