@@ -32,7 +32,7 @@ Kafka服务器上的数据除了用于实时分析,还被通过streamSets转换�
 流数据schema 用于判断实时数据的状态，并在必要情况下生成警报信息
 ![Demo Image](https://github.com/charlesDataCenterFPGA/2019-ncov-BigData-Platform-Ref-Design/blob/master/%E6%B5%81%E6%95%B0%E6%8D%AE.PNG)
 
-分析诊疗状态记录
+流数据处理算法：分析诊疗状态记录
  1. 如果不为空而且!=0 则发出警报信息给相关人员包含：身份证，当前地点（查询位置表格），诊疗状态 
  2. 如果诊疗状态为空，则判断体温，如果体温>37.5摄氏度则发出警报信息给相关人员：身份证，当前地点（查询位置表格），体温值
 
